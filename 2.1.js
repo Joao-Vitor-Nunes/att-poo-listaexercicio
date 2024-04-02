@@ -16,7 +16,8 @@ class Animal {
 class Mamifero extends Animal {
     #tipodePele
 
-    constructor(tipodePele) {
+    constructor(nome, idade, tipodePele) {
+        super(nome, idade)
         this.#tipodePele = tipodePele
     }
 
@@ -49,6 +50,11 @@ class Ave extends Animal {
 }
 
 const ave = new Ave('Pica-pau', 10, 'amassado', 400)
+const vaca = new Mamifero('Mococa', 16)
+
 ave.exibirInformacoes()
 ave.podeVoar()
 ave.tipodeBico()
+
+vaca.exibirInformacoes()
+vaca.mugir()
